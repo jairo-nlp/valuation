@@ -1,17 +1,19 @@
 # coding: utf-8
 # ## Processa DRE e Balanço
 
-from IPython.core.display import display, HTML
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from . import sanity_checks
-from . import helper_functions
-from . import plot_functions
-from . import print_functions
-from . import report_functions
+from IPython.core.display import display, HTML
+
+from .sanity_checks import *
+from .helper_functions import *
+from .plot_functions import *
+from .print_functions import *
+from .report_functions import *
 
 sns.set_style('darkgrid')
 BOLD = '\033[1m'
