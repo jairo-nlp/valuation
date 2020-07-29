@@ -1,0 +1,6 @@
+# Requirements Valuation
+IPython.core.display
+pandas
+numpy
+matplotlib.pyplot
+seaborn
