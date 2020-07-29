@@ -1,5 +1,5 @@
 import pytest
-from valuation.valuation import *
+from valuation import *
 
 def test_checa_dir():
     assert dir(valuation) == 'Modulos'
