@@ -8,8 +8,7 @@ import seaborn as sns
 
 from IPython.core.display import display, HTML
 
-import valuation
-from valuation.valuation import *
+from .valuation import *
 
 sns.set_style('darkgrid')
 BOLD = '\033[1m'
