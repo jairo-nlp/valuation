@@ -1,11 +1,13 @@
 import pytest
 import valuation as v
 
+def test_checa_dir():
+    assert dir(valuation) == 'Modulos'
 
 def test_obtem_wacc():
     expected = 0.1008
     result = v.obtem_wacc(perc_d=0.3, perc_e=0.7, 
-                          ke=0.12, kd=0.08, taxa_ir=0.3)
+                        ke=0.12, kd=0.08, taxa_ir=0.3)
     assert result == pytest.approx(expected), 'WACC incorreto.'
 
 
