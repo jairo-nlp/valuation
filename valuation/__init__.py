@@ -7,6 +7,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+from . import sanity_checks
+from . import helper_functions
+from . import plot_funcions
+from . import print_functions
+from . import report_functions
+
 sns.set_style('darkgrid')
 BOLD = '\033[1m'
 UNDERLINE = '\033[4m'
