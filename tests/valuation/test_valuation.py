@@ -2,7 +2,7 @@ import pytest
 
 
 def test_obtem_wacc():
-    from valuation import obtem_wacc
+    from valuation.valuation import obtem_wacc
     expected = 0.1008
     result = v.obtem_wacc(perc_d=0.3, perc_e=0.7,
                         ke=0.12, kd=0.08, taxa_ir=0.3)
