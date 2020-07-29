@@ -9,7 +9,7 @@ import seaborn as sns
 
 from . import sanity_checks
 from . import helper_functions
-from . import plot_funcions
+from . import plot_functions
 from . import print_functions
 from . import report_functions
 
