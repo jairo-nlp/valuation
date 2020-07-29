@@ -1,6 +1,9 @@
 import pytest
 from valuation import *
 
+def test_checa_dir():
+    print(dir(valuation))
+    assert 1
 
 def test_obtem_wacc():
     expected = 0.1008
