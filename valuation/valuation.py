@@ -1,4 +1,15 @@
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from IPython.core.display import display, HTML
+
+sns.set_style('darkgrid')
+BOLD = '\033[1m'
+UNDERLINE = '\033[4m'
+END = '\033[0m'
+
 
 def checa_valores_bal(df_bal):
     """Checa os valores informados no Balanço para:
@@ -392,7 +403,7 @@ def gera_report_fcfe(df_dre, df_bal, df_par, df_cg, ir):
     return df_fcf
 
 
-def gera_report_estr_capital(df_bal, perc_d, perc_e):
+def gera_report_estr_capital(ticker, df_bal, perc_d, perc_e):
     imprime_header('Estrutura de Capital')
 
     estrutura_cap = \
@@ -459,10 +470,10 @@ def gera_report_valor_justo(df_composicao_vp, num_acoes, cotacao_atual):
 
     # Obtem o valor justo projetado para a ação
     valor_presente_equity, valor_justo_por_acao = \
-        obtem_preco_justo(df_composicao_vp)
+        obtem_preco_justo(df_composicao_vp, num_acoes)
 
     upside, upside_financeiro = obtem_upside(valor_justo_por_acao,
-                                             cotacao_atual, num_acoes)
+                                             cotacao_atual)
 
     imprime_rel_preco_justo(valor_presente_equity,
                             cotacao_atual, num_acoes,
@@ -491,7 +502,7 @@ def gera_relatorio_completo(ticker):
     df_cg = gera_report_cg(df_bal)
     df_fcf = gera_report_fcfe(df_dre, df_bal, df_par, df_cg, ir)
 
-    gera_report_estr_capital(df_bal, perc_d, perc_e)
+    gera_report_estr_capital(ticker, df_bal, perc_d, perc_e)
 
     ke, str_ke = obtem_custo_equity_ke(rf, beta, premio_risco,
                                        ke_manual=ke_manual,
