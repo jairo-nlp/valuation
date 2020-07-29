@@ -1,6 +1,5 @@
 import pytest
 import valuation
-from valuation.valuation import obtem_wacc, obtem_upside
 
 
 def test_obtem_wacc():
