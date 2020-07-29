@@ -1,5 +1,5 @@
 import pytest
-import valuation
+from valuation import *
 
 
 def test_obtem_wacc():
