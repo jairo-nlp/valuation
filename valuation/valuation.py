@@ -311,8 +311,6 @@ def adiciona_perp_ao_fcfe(df_fcf, fc_perpetuidade):
     ao fluxo de caixa do último ano projetado
 
     Retorna o dataframe com o valor adicinado"""
-    fc_ult_ano_proj = df_fcf.loc['FCFE']['Projetado'].iloc[:-1]
-    fc_combinado_perp = fc_ult_ano_proj + fc_perpetuidade
 
     ultimo_ano_projetado = df_fcf.columns.levels[1][-1]
     df_fcf.loc['FCFE_Perp'] = 0
